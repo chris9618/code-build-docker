@@ -67,7 +67,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /green/index.html
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: green-app
   ports:
@@ -84,7 +84,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /yellow/index.html
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: yellow-app
   ports:
